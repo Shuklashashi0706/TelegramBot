@@ -2,6 +2,8 @@ import { Bot } from "grammy";
 import { InlineKeyboard } from "grammy";
 import { webhookCallback } from "grammy";
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config({ path: "./.env" });
 // Create a bot using the Telegram token
 const bot = new Bot(process.env.TELEGRAM_TOKEN || "");
 const aboutUrlKeyboard = new InlineKeyboard().url(
